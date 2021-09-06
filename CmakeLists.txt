@@ -1,0 +1,10 @@
+cmake_minimum_required(VERSION 3.14)
+project(
+        uds
+        VERSION 0.1
+        DESCRIPTION "C++ UDS implementation"
+        LANGUAGES CXX)
+
+add_subdirectory(src)
+add_subdirectory(test)
+
