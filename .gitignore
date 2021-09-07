@@ -31,6 +31,5 @@
 *.out
 *.app
 
-# Clion project files
-.idea
-
+# Google Test build folder
+cmake-build-debug/
