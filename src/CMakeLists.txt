@@ -4,7 +4,6 @@ add_library(
         Service.cpp
         Uds.cpp
         WriteDataByIdentifier.cpp
-        main.cpp
 )
 
 target_include_directories(

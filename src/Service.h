@@ -12,16 +12,14 @@
 namespace Uds {
 
     class Service {
-    public:
+
+    protected:
         int Id;
 
-        Service() { this->Id = 2; }
-
+    public:
+        Service() {}
         int getId() { return Id; }
-
         void process() {}
-
-        //char data;
 
         friend std::istream &operator>>(std::istream &input, Service &Service) {
             input >> Service.Id;

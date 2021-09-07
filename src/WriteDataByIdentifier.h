@@ -7,11 +7,11 @@
 
 #include "Service.h"
 
-class WriteDataByIdentifier: public Uds::Service {
-public:
-    WriteDataByIdentifier() : Service() {}
-
-};
-
+namespace Uds {
+    class WriteDataByIdentifier : public Service {
+    public:
+        WriteDataByIdentifier() : Service() { this->Id = 0x22; }
+    };
+}
 
 #endif //UDS_WRITEDATABYIDENTIFIER_H

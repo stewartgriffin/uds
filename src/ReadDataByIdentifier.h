@@ -7,11 +7,11 @@
 
 #include "Service.h"
 #include "stdio.h"
-
-class ReadDataByIdentifier: public Uds::Service {
-public:
-    ReadDataByIdentifier() : Service() {}
-};
-
+namespace Uds {
+    class ReadDataByIdentifier : public Service {
+    public:
+        ReadDataByIdentifier() : Service() {}
+    };
+}
 
 #endif //UDS_READDATABYIDENTIFIER_H

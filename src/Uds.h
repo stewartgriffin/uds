@@ -7,6 +7,7 @@
 
 #include <vector>
 #include "ReadDataByIdentifier.h"
+#include "WriteDataByIdentifier.h"
 
 class Diag {
 public:

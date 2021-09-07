@@ -6,8 +6,5 @@
 
 int main()
 {
-    auto obiekt = new Uds::Service();
-
-    //std::cin >> *obiekt;
     return 0;
 }
