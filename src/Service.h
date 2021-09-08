@@ -8,25 +8,26 @@
 #include <iostream>
 #include <string>
 #include <cstdio>
+#include <vector>
 
 namespace Uds {
-
     class Service {
-
-    protected:
+    private:
         int Id;
 
+    protected:
+        std::vector<char> buffer;
+
     public:
-        Service() {}
+        Service(int id) {Id = id;}
         int getId() { return Id; }
-        void process() {}
-
-        friend std::istream &operator>>(std::istream &input, Service &Service) {
-            input >> Service.Id;
-            return input;
+        void feedData(std::vector<char> input) {
+            this->buffer.insert(
+                    this->buffer.end(),
+                    std::make_move_iterator(input.begin()),
+                    std::make_move_iterator(input.end())
+            );
         }
-
     };
-
 }
 #endif //UDS_SERVICE_H

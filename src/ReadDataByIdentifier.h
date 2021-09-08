@@ -10,7 +10,7 @@
 namespace Uds {
     class ReadDataByIdentifier : public Service {
     public:
-        ReadDataByIdentifier() : Service() {}
+        ReadDataByIdentifier() : Service(0x22) { }
     };
 }
 

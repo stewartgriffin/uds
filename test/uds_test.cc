@@ -5,5 +5,8 @@
 
 TEST(HelloTest, BasicAssertions) {
     auto WriteDataById = new Uds::WriteDataByIdentifier();
-    EXPECT_EQ(WriteDataById->getId(),0x22);
+    EXPECT_EQ(WriteDataById->getId(),0x2E);
+
+    auto ReadDataById = new Uds::ReadDataByIdentifier();
+    EXPECT_EQ(ReadDataById->getId(),0x22);
 }

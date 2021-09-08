@@ -10,7 +10,7 @@
 namespace Uds {
     class WriteDataByIdentifier : public Service {
     public:
-        WriteDataByIdentifier() : Service() { this->Id = 0x22; }
+        WriteDataByIdentifier() : Service(0x2E) { }
     };
 }
 
