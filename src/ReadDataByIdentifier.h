@@ -9,6 +9,11 @@
 #include "stdio.h"
 namespace Uds {
     class ReadDataByIdentifier : public Service {
+    private:
+        virtual void processData(std::vector<char> buffer){
+            for (auto i = buffer.begin(); i != buffer.end(); ++i)
+                std::cout << *i << ' ';
+        }
     public:
         ReadDataByIdentifier() : Service(0x22) { }
     };
