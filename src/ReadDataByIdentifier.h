@@ -6,14 +6,11 @@
 #define UDS_READDATABYIDENTIFIER_H
 
 #include "Service.h"
-#include "stdio.h"
+
 namespace Uds {
     class ReadDataByIdentifier : public Service {
     private:
-        virtual void processData(std::vector<char> buffer){
-            for (auto i = buffer.begin(); i != buffer.end(); ++i)
-                std::cout << *i << ' ';
-        }
+        void processData(std::vector<char> buffer) override;
     public:
         ReadDataByIdentifier() : Service(0x22) { }
     };
