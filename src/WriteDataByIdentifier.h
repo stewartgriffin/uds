@@ -10,7 +10,7 @@
 namespace Uds {
     class WriteDataByIdentifier : public Service {
     private:
-        void processData(std::vector<char> buffer) override;
+        void ProcessData(std::vector<char> buffer) override;
     public:
         WriteDataByIdentifier() : Service(0x2E){};
     };

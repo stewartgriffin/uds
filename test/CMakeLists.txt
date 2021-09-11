@@ -16,7 +16,7 @@ enable_testing()
 add_executable(
         uds_test
         uds_test.cc
-)
+        service_test.cpp did_test.cpp)
 
 target_link_libraries(
         uds_test PUBLIC

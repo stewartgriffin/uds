@@ -6,14 +6,14 @@
 #include <vector>
 
 namespace Uds {
-    Service::Service(int id){Id = id;}
-    int Service::getId() { return Id; }
-    void Service::feedData(std::vector<char> *input) {
+    Service::Service(int id):Id(id){}
+    int Service::GetId() { return Id; }
+    void Service::FeedData(std::vector<char> *input) {
         this->buffer.insert(
                 this->buffer.end(),
                 std::make_move_iterator(input->begin()),
                 std::make_move_iterator(input->end())
         );
-        processData(this->buffer);
+        ProcessData(this->buffer);
     }
 }

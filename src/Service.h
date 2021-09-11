@@ -13,12 +13,12 @@ namespace Uds {
     private:
         std::vector<char> buffer;
         int Id;
-        virtual void processData(std::vector<char> buffer) = 0;
+        virtual void ProcessData(std::vector<char> buffer) = 0;
 
     public:
         Service(int id);
-        int getId();
-        void feedData(std::vector<char> *input);
+        int GetId();
+        void FeedData(std::vector<char> *input);
     };
 }
 #endif //UDS_SERVICE_H

@@ -6,7 +6,7 @@
 #include <iostream>
 
 namespace Uds {
-    void ReadDataByIdentifier::processData(std::vector<char> buffer)  {
+    void ReadDataByIdentifier::ProcessData(std::vector<char> buffer)  {
         for (auto i = buffer.begin(); i != buffer.end(); ++i)
             std::cout << *i;
     }
