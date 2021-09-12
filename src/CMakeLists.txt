@@ -4,7 +4,9 @@ add_library(
         Service.cpp
         Uds.cpp
         WriteDataByIdentifier.cpp
-        Did.cpp Did.h)
+        Did.cpp
+        EcuReset.cpp
+)
 
 target_include_directories(
         uds_lib PUBLIC

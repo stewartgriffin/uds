@@ -8,15 +8,18 @@
 #include <vector>
 #include "ReadDataByIdentifier.h"
 #include "WriteDataByIdentifier.h"
+#include "Did.h"
 
-class Diag {
-public:
-    Diag() {}
-    void Request(std::vector<char> input){}
-    void Tick(unsigned int period){}
-private:
+namespace Uds{
+    class Diag {
+    public:
+        Diag() {}
+        void Request(std::vector<char> input){}
+        void AddDid(Did &did){}
+        void Tick(unsigned int period){}
+    private:
 
-};
-
+    };
+}
 
 #endif //UDS_UDS_H
