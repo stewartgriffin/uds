@@ -1,5 +1,7 @@
-//
-// Created by Tomasz Ziajko on 27/05/2021.
-//
-
 #include "Uds.h"
+
+namespace Uds {
+    void Diag::ProcessData(std::vector<char> &input) {
+
+    }
+}

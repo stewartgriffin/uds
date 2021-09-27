@@ -14,7 +14,7 @@ TEST(UdsTest, DataProcessing) {
     auto feed1 = new std::vector<char>{'t', 'e', 's', 't', '1', ' '};
     auto feed2 = new std::vector<char>{'t', 'e', 's', 't', '2', ' '};
     auto feed3 = new std::vector<char>{'t', 'e', 's', 't', '3', ' '};
-    WriteDataById->FeedData(feed1);
-    WriteDataById->FeedData(feed2);
-    WriteDataById->FeedData(feed3);
+    WriteDataById->FeedData(*feed1);
+    WriteDataById->FeedData(*feed2);
+    WriteDataById->FeedData(*feed3);
 }

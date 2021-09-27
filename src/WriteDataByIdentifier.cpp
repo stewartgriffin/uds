@@ -1,13 +1,9 @@
-//
-// Created by Tomasz Ziajko on 28/05/2021.
-//
-
 #include "WriteDataByIdentifier.h"
 #include <iostream>
 
 namespace Uds {
-    void WriteDataByIdentifier::ProcessData(std::vector<char> &buffer)  {
-        for (auto i = buffer.begin(); i != buffer.end(); ++i)
+    void WriteDataByIdentifier::ProcessData(std::vector<char> &input)  {
+        for (auto i = input.begin(); i != input.end(); ++i)
             std::cout << *i;
     }
 }

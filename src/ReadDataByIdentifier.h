@@ -1,7 +1,3 @@
-//
-// Created by Tomasz Ziajko on 27/05/2021.
-//
-
 #ifndef UDS_READDATABYIDENTIFIER_H
 #define UDS_READDATABYIDENTIFIER_H
 
@@ -10,7 +6,7 @@
 namespace Uds {
     class ReadDataByIdentifier : public Service {
     private:
-        void ProcessData(std::vector<char> buffer) override;
+        void ProcessData(std::vector<char> &buffer);
     public:
         ReadDataByIdentifier() : Service(0x22) { }
     };

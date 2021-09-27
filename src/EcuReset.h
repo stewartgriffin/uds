@@ -1,7 +1,3 @@
-//
-// Created by Tomasz Ziajko on 11/09/2021.
-//
-
 #ifndef UDS_ECURESET_H
 #define UDS_ECURESET_H
 
@@ -10,7 +6,7 @@
 namespace Uds {
     class EcuReset : public Service {
     private:
-        void ProcessData(std::vector<char> buffer) override;
+        void ProcessData(std::vector<char> buffer);
     public:
         EcuReset() : Service(0x11) { }
     };

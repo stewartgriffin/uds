@@ -1,7 +1,3 @@
-//
-// Created by Tomasz Ziajko on 27/05/2021.
-//
-
 #ifndef UDS_UDS_H
 #define UDS_UDS_H
 
@@ -12,13 +8,17 @@
 
 namespace Uds{
     class Diag {
+    private:
+//        std::vector<Did> Dids;
+//        std::vector<Service> Services;
+        int CurrentService;
     public:
         Diag() {}
         void Request(std::vector<char> input){}
-        void AddDid(Did &did){}
+//        void AddDid(Did &did){Dids.push_back(did);}
+//        void AddService(Service &service){Services.push_back(service);}
+        void ProcessData(std::vector<char> &input);
         void Tick(unsigned int period){}
-    private:
-
     };
 }
 

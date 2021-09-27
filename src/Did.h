@@ -1,26 +1,23 @@
-//
-// Created by Tomasz Ziajko on 11/09/2021.
-//
+#ifndef DID_H
+#define DID_H
 
-#ifndef UDS_DID_H
-#define UDS_DID_H
+#include <vector>
 
 namespace Uds {
-    template<class DidData>
     class Did {
     private:
         int Id;
         bool Writable;
         bool Readable;
-        DidData Data;
+        std::vector<int> *Data;
 
     public:
         Did(int id, bool writable, bool readable) :
                 Id(id), Writable(writable), Readable(readable) {}
         int GetId() {return Id;}
-        virtual DidData GetData() = 0;
-        virtual void SetData(DidData data) = 0;
+        std::vector<int> *GetData(void) {return Data;}
+        void SetData(std::vector<int> *data){Data = data;}
     };
 }
 
-#endif //UDS_DID_H
+#endif //DID_H
